@@ -1,0 +1,58 @@
+# coding: utf-8
+
+require 'spec_helper'
+
+feature 'gerenciar exame' do
+
+  scenario 'incluir exame', :javascript => true  do
+
+    visit new_exame_path
+
+    preencher_e_verificar_exame
+ 
+
+  end
+
+  scenario 'alterar exame' do #, :js => true  do
+
+    exame = FactoryGirl.create(:exame)
+
+    visit edit_exame_path(exame)
+
+    preencher_e_verificar_exame
+
+
+
+  end
+
+   scenario 'excluir exame' do #, :javascript => true  do
+
+       exame = FactoryGirl.create(:exame)
+
+        visit exames_path
+
+        click_link 'Excluir'
+
+    
+
+  end
+
+   def preencher_e_verificar_exame
+
+      fill_in 'Nome',  :with => "Dr Felipe"
+      fill_in 'Fone', :with => "70707070"
+      fill_in 'Endereco', :with => "Rua dos Bobos"
+      fill_in 'Email', :with => "1@2.com"
+	  fill_in 'Crm', :with => "1234CA"
+
+      click_button 'Salvar'
+
+      page.should have_content 'Nome: Dr Felipe'
+      page.should have_content 'Fone: 70707070'
+      page.should have_content 'Endereco: Rua dos Bobos'
+      page.should have_content 'Email: 1@2.com'
+	  page.should have_content 'Crm: 1234CA'
+     
+
+   end
+end
