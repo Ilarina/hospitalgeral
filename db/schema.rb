@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140217202523) do
+ActiveRecord::Schema.define(version: 20140217205332) do
 
   create_table "pacientes", force: true do |t|
     t.string   "nome"
