@@ -1,0 +1,7 @@
+class ConsultaController < InheritedResources::Base
+
+		def build_resource_params
+		    [params.fetch(:consulta, {}).permit(:data, :hora, :paciente_id, :medico_id)]
+		end
+
+end

@@ -1,0 +1,68 @@
+# coding: utf-8
+require 'spec_helper'
+
+feature 'gerenciar Consultation' do
+
+  scenario 'incluir Consultation' do #, :javascript => true  do
+
+    paciente = FactoryGirl.create(:paciente, :nome => 'XXX')
+	medico = FactoryGirl.create(:medico, :nome => 'YYY')
+
+    visit new_consultation_path
+
+    preencher_e_verificar_consultation
+   
+
+  end
+
+  scenario 'alterar Consultation' do #, :javascript => true  do
+
+	medico = FactoryGirl.create(:medico, :nome => 'YYY')
+    paciente = FactoryGirl.create(:paciente, :nome => 'XXX')
+	consultation = FactoryGirl.create(:consultation, :paciente => paciente, :medico => medico)
+
+
+    visit edit_consultation_path(consultation)
+
+    preencher_e_verificar_consultation
+
+
+  end
+
+  scenario 'excluir Consultation' do #, :javascript => true  do
+
+	medico = FactoryGirl.create(:medico, :nome => 'YYY')
+    paciente = FactoryGirl.create(:paciente, :nome => 'XXX')
+	consultation = FactoryGirl.create(:consultation, :paciente => paciente, :medico => medico)
+
+    visit consultations_path
+
+    click_link 'Excluir'
+    
+    
+  end
+
+
+
+  def preencher_e_verificar_consultation
+
+    
+    fill_in 'Data', :with => '10/03/2014'
+    fill_in 'Hora', :with => '12:30'
+  
+	select 'YYY', :from => 'Medico'
+    select 'XXX', :from => 'Paciente'
+
+	click_button 'Salvar'
+    
+    page.should have_content 'Data: 10/03/2014'
+    page.should have_content 'Hora: 12:30'
+    page.should have_content 'Medico: YYY'
+    page.should have_content 'Paciente: XXX'
+
+    
+  end
+
+      
+
+end
