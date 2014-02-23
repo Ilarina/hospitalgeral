@@ -1,0 +1,37 @@
+<h1>Listing requests</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Plano</th>
+      <th>Dataexame</th>
+      <th>Dataentrega</th>
+      <th>Laudo</th>
+      <th>Exame</th>
+      <th>Consultation</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @requests.each do |request| %>
+      <tr>
+        <td><%= request.plano %></td>
+        <td><%= request.dataexame %></td>
+        <td><%= request.dataentrega %></td>
+        <td><%= request.laudo %></td>
+        <td><%= request.exame %></td>
+        <td><%= request.consultation %></td>
+        <td><%= link_to 'Show', request %></td>
+        <td><%= link_to 'Edit', edit_request_path(request) %></td>
+        <td><%= link_to 'Excluir', request, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Request', new_request_path %>

@@ -1,4 +1,6 @@
 Hospital::Application.routes.draw do
+  resources :requests
+
   resources :consultations
 
   resources :consultas

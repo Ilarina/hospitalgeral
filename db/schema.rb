@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140223173727) do
+ActiveRecord::Schema.define(version: 20140223192323) do
 
   create_table "consultations", force: true do |t|
     t.string   "data"
@@ -51,5 +51,19 @@ ActiveRecord::Schema.define(version: 20140223173727) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "requests", force: true do |t|
+    t.string   "plano"
+    t.string   "dataexame"
+    t.string   "dataentrega"
+    t.string   "laudo"
+    t.integer  "exame_id"
+    t.integer  "consultation_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "requests", ["consultation_id"], name: "index_requests_on_consultation_id"
+  add_index "requests", ["exame_id"], name: "index_requests_on_exame_id"
 
 end

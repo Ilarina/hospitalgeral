@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Plano:</strong>
+  <%= @request.plano %>
+</p>
+
+<p>
+  <strong>Dataexame:</strong>
+  <%= @request.dataexame %>
+</p>
+
+<p>
+  <strong>Dataentrega:</strong>
+  <%= @request.dataentrega %>
+</p>
+
+<p>
+  <strong>Laudo:</strong>
+  <%= @request.laudo %>
+</p>
+
+<p>
+  <strong>Exame:</strong>
+  <%= @request.exame.descricao %>
+</p>
+
+<p>
+  <strong>Consultation:</strong>
+  <%= @request.consultation.data %>
+</p>
+
+<%= link_to 'Edit', edit_request_path(@request) %> |
+<%= link_to 'Back', requests_path %>
