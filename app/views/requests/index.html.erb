@@ -22,8 +22,8 @@
         <td><%= request.dataexame %></td>
         <td><%= request.dataentrega %></td>
         <td><%= request.laudo %></td>
-        <td><%= request.exame %></td>
-        <td><%= request.consultation %></td>
+        <td><%= request.exame.descricao %></td>
+        <td><%= request.consultation.paciente.nome %>,<%= request.consultation.data %></td>
         <td><%= link_to 'Show', request %></td>
         <td><%= link_to 'Edit', edit_request_path(request) %></td>
         <td><%= link_to 'Excluir', request, method: :delete, data: { confirm: 'Are you sure?' } %></td>

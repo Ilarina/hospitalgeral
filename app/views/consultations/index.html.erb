@@ -18,8 +18,8 @@
       <tr>
         <td><%= consultation.data %></td>
         <td><%= consultation.hora %></td>
-        <td><%= consultation.medico %></td>
-        <td><%= consultation.paciente %></td>
+        <td><%= consultation.medico.nome %></td>
+        <td><%= consultation.paciente.nome %></td>
         <td><%= link_to 'Show', consultation %></td>
         <td><%= link_to 'Edit', edit_consultation_path(consultation) %></td>
         <td><%= link_to 'Excluir', consultation, method: :delete, data: { confirm: 'Are you sure?' } %></td>

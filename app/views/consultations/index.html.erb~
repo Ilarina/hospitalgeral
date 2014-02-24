@@ -22,7 +22,7 @@
         <td><%= consultation.paciente %></td>
         <td><%= link_to 'Show', consultation %></td>
         <td><%= link_to 'Edit', edit_consultation_path(consultation) %></td>
-        <td><%= link_to 'Destroy', consultation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Excluir', consultation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

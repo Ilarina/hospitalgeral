@@ -4,6 +4,6 @@
   = form.input :dataexame, :label => 'Dataexame'
   = form.input :dataentrega, :label => 'Dataentrega'
   = form.input :laudo, :label => 'Laudo'
-  = form.input :consultation, :member_label => :data, :label => 'Consulta'
+  = form.input :consultation, :member_label => Proc.new{|c| h(c.paciente.nome +" "+ c.data)}, :label => 'Consultation'
   = form.input :exame, :member_label => :descricao, :label => 'Exame'
   = form.submit 'Salvar'
