@@ -7,7 +7,7 @@
 	{
 		margin: 0px;
 		padding: 0px;
-		background: #79C255;
+		background: #479E8D;
 		font-family: 'Montserrat', sans-serif;
 		font-size: 11pt;
 		font-weight: 200;
@@ -310,8 +310,8 @@
 
 	#header
 	{
-		position: relative;
-		padding: 5em 0em;
+		/*position: relative;
+		padding: 5em 0em;*/
 	}
 
 /*********************************************************************************/
@@ -322,7 +322,7 @@
 	{
 		position: absolute;
 		top: 4em;
-		left: 0;
+		left: 2em;
 	}
 	
 	#logo h1
@@ -334,7 +334,7 @@
 	{
 		text-decoration: none;
 		text-transform: uppercase;
-		color: #79C255;
+		color: #479E8D;
 	}
 
 /*********************************************************************************/
@@ -345,7 +345,7 @@
 	{
 		position: absolute;
 		top: 4.5em;
-		right: 0;
+		right: 2em;
 	}
 	
 	#menu ul
@@ -358,6 +358,7 @@
 		display: block;
 		float: left;
 		text-align: center;
+		padding: 7px;
 	}
 	
 	#menu li a, #menu li span
@@ -495,8 +496,8 @@
 	#featured
 	{
 		overflow: hidden;
-		padding: 5em 0em;
-		background: #79C255;
+		padding: 1em 0em;
+		background: #479E8D;
 		color: rgba(255,255,255,.8);
 		text-align: center;
 	}
@@ -573,8 +574,8 @@
 
 	ul.menuprincipal > li:hover
 	{
-		border: 2px solid #79C255;
-		background: #79C255;
+		/*border: 2px solid #000;*/
+		background: #479E8D;
 		border-radius: 6px;
 		color: #FFF;
 		padding: 7px;

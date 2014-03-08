@@ -24,7 +24,7 @@
         <td><%= medico.crm %></td>
         <td><%= link_to 'Show', medico %></td>
         <td><%= link_to 'Edit', edit_medico_path(medico) %></td>
-        <td><%= link_to 'Destroy', medico, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Excluir', medico, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

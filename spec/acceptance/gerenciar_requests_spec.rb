@@ -5,8 +5,8 @@ feature 'gerenciar Request' do
 
   scenario 'incluir Request' do #, :javascript => true  do
 
-
-	consultation = FactoryGirl.create(:consultation, :data => 'YYY')
+	paciente = FactoryGirl.create(:paciente, :nome => "ZZZ")
+	consultation = FactoryGirl.create(:consultation, :data => 'YYY', :paciente => paciente)
     exame = FactoryGirl.create(:exame, :descricao => 'XXX')
 
     visit new_request_path
@@ -18,7 +18,8 @@ feature 'gerenciar Request' do
 
   scenario 'alterar Request' do #, :javascript => true  do
 
-	consultation = FactoryGirl.create(:consultation, :data => 'YYY')
+	paciente = FactoryGirl.create(:paciente, :nome => "ZZZ")
+	consultation = FactoryGirl.create(:consultation, :data => 'YYY', :paciente => paciente)
     exame = FactoryGirl.create(:exame, :descricao => 'XXX')
 	request = FactoryGirl.create(:request, :consultation => consultation, :exame => exame)
 
@@ -32,7 +33,8 @@ feature 'gerenciar Request' do
 
   scenario 'excluir Request' do #, :javascript => true  do
 
-	consultation = FactoryGirl.create(:consultation, :data => 'YYY')
+	paciente = FactoryGirl.create(:paciente, :nome => "ZZZ")
+	consultation = FactoryGirl.create(:consultation, :data => 'YYY', :paciente => paciente)
     exame = FactoryGirl.create(:exame, :descricao => 'XXX')
 	request = FactoryGirl.create(:request, :consultation => consultation, :exame => exame)
 
@@ -61,7 +63,7 @@ feature 'gerenciar Request' do
     page.should have_content 'Dataexame: dataexame'
     page.should have_content 'Dataentrega: dataentrega'
     page.should have_content 'Laudo: Laudo'
-	page.should have_content 'Consultation: YYY'
+	page.should have_content 'Consultation: ZZZ YYY'
 	page.should have_content 'Exame: XXX'
 
     
