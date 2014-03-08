@@ -1,4 +1,4 @@
-<h1>Listing exames</h1>
+<h1>Lista de Exames</h1>
 
 <table>
   <thead>
@@ -18,8 +18,8 @@
         <td><%= exame.descricao %></td>
         <td><%= exame.valor %></td>
         <td><%= exame.observacao %></td>
-        <td><%= link_to 'Show', exame %></td>
-        <td><%= link_to 'Edit', edit_exame_path(exame) %></td>
+        <td><%= link_to 'Exibir', exame %></td>
+        <td><%= link_to 'Editar', edit_exame_path(exame) %></td>
         <td><%= link_to 'Excluir', exame, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Exame', new_exame_path %>
+<%= link_to 'Novo Exame', new_exame_path %>

@@ -12,7 +12,7 @@
 
 <p>
   <strong>Medico:</strong>
-  <%= @consultation.medico %>
+  <%= @consultation.medico.nome %>
 </p>
 
 <p>

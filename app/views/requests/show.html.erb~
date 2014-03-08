@@ -26,7 +26,8 @@
 </p>
 
 <p>
-  <strong>Consultation:</strong>
+  <strong>Consulta:</strong>
+    <%= @request.consultation.paciente.nome %>
   <%= @request.consultation.data %>
 </p>
 

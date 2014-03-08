@@ -20,9 +20,9 @@
         <td><%= paciente.fone %></td>
         <td><%= paciente.endereco %></td>
         <td><%= paciente.email %></td>
-        <td><%= link_to 'Show', paciente %></td>
-        <td><%= link_to 'Edit', edit_paciente_path(paciente) %></td>
-        <td><%= link_to 'Excluir', paciente, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Exibir', paciente %></td>
+        <td><%= link_to 'Editar', edit_paciente_path(paciente) %></td>
+        <td><%= link_to 'Excluir', paciente, method: :delete, data: { confirm: 'Deseja realmente excluir?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Paciente', new_paciente_path %>
+<%= link_to 'Novo Paciente', new_paciente_path %>

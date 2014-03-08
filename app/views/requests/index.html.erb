@@ -8,7 +8,7 @@
       <th>Dataentrega</th>
       <th>Laudo</th>
       <th>Exame</th>
-      <th>Consultation</th>
+      <th>Consulta</th>
       <th></th>
       <th></th>
       <th></th>
@@ -24,9 +24,9 @@
         <td><%= request.laudo %></td>
         <td><%= request.exame.descricao %></td>
         <td><%= request.consultation.paciente.nome %>,<%= request.consultation.data %></td>
-        <td><%= link_to 'Show', request %></td>
-        <td><%= link_to 'Edit', edit_request_path(request) %></td>
-        <td><%= link_to 'Excluir', request, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Exibir', request %></td>
+        <td><%= link_to 'Editar', edit_request_path(request) %></td>
+        <td><%= link_to 'Excluir', request, method: :delete, data: { confirm: 'Deseja realmente excluir?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -34,4 +34,4 @@
 
 <br>
 
-<%= link_to 'New Request', new_request_path %>
+<%= link_to 'Nova Requisicao', new_request_path %>

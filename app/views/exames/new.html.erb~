@@ -1,6 +1,5 @@
-<h1>Editing exame</h1>
+<h1>New exame</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Exibir', @exame %> |
 <%= link_to 'Voltar', exames_path %>

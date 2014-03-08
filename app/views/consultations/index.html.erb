@@ -20,9 +20,9 @@
         <td><%= consultation.hora %></td>
         <td><%= consultation.medico.nome %></td>
         <td><%= consultation.paciente.nome %></td>
-        <td><%= link_to 'Show', consultation %></td>
-        <td><%= link_to 'Edit', edit_consultation_path(consultation) %></td>
-        <td><%= link_to 'Excluir', consultation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Exibir', consultation %></td>
+        <td><%= link_to 'Editar', edit_consultation_path(consultation) %></td>
+        <td><%= link_to 'Excluir', consultation, method: :delete, data: { confirm: 'Deseja realmente excluir?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Consultation', new_consultation_path %>
+<%= link_to 'Nova Consulta', new_consultation_path %>
