@@ -7,7 +7,7 @@
 	{
 		margin: 0px;
 		padding: 0px;
-		background: #479E8D;
+		background: #f79E8D;
 		font-family: 'Montserrat', sans-serif;
 		font-size: 11pt;
 		font-weight: 200;
@@ -334,7 +334,7 @@
 	{
 		text-decoration: none;
 		text-transform: uppercase;
-		color: #479E8D;
+		color: #f79E8D;
 	}
 
 /*********************************************************************************/
@@ -368,7 +368,8 @@
 		text-decoration: none;
 		text-transform: uppercase;
 		font-size: 0.8em;
-		color: #2B3F48;
+		color: #FFFFFF;
+		font-weight: bold;
 	}
 	
 	#menu li:hover a, #menu li.active a, #menu li.active span
@@ -497,7 +498,7 @@
 	{
 		overflow: hidden;
 		padding: 1em 0em;
-		background: #479E8D;
+		background: #f79E8D;
 		color: rgba(255,255,255,.8);
 		text-align: center;
 	}
@@ -575,7 +576,7 @@
 	ul.menuprincipal > li:hover
 	{
 		/*border: 2px solid #000;*/
-		background: #479E8D;
+		background: #f79E8D;
 		border-radius: 6px;
 		color: #FFF;
 		padding: 7px;
